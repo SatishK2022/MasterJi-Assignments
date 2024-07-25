@@ -13,7 +13,7 @@ function OtpForm() {
     }
   }, []);
 
-  // always checking if opt is correct or not 
+  // always checking if opt is correct or not
   // useEffect(() => {
   //     if (otp.length < 4 ) return;
 
@@ -62,6 +62,7 @@ function OtpForm() {
     if (otp.length < 4) return;
 
     const submitOtp = otp.join("");
+    console.log(submitOtp);
     if (submitOtp.length === 4 && submitOtp === "1234") {
       setOtpVerified(true);
       setOtpError(false);
@@ -72,7 +73,7 @@ function OtpForm() {
   };
 
   return (
-    <div className="h-screen w-full flex items-center justify-center flex-col gap-10 bg-[#3e73af] p-2 font">
+    <div className="min-h-screen w-full flex items-center justify-center flex-col gap-10 bg-[#3e73af] p-2 relative">
       <h1 className="font-bold text-5xl text-white">Chai aur Code</h1>
       <form
         onSubmit={onSubmit}
@@ -93,7 +94,7 @@ function OtpForm() {
                   ref={(ref) => (inputRefs.current[index] = ref)}
                   className={`${
                     otpError
-                      ? "border-2 border-red-400"
+                      ? "border-2 border-[#ea2d5a]"
                       : otpVerified
                       ? "border-2 border-[#23CF9B]"
                       : "border-2 border-[#dae3ef]"
@@ -106,16 +107,26 @@ function OtpForm() {
           <button
             type="submit"
             className={`${
-              otpVerified
-                ? "bg-[#23CF9B] hover:bg-[#1eb084]"
-                : "bg-[#112D4E] hover:bg-[#204671]"
+              otpError
+                ? "bg-[#ea2d5a] cursor-not-allowed"
+                : otpVerified
+                ? "bg-[#23CF9B] hover:bg-[#1eb084] cursor-pointer"
+                : "bg-[#112D4E] cursor-not-allowed"
             } w-full text-white px-4 py-3 rounded text-base transition-all ease-in-out duration-200 shadow-md`}
           >
-            {otpVerified ? "Verified" : "Verify Account"}
+            {otpVerified
+              ? "Verified"
+              : otpError
+              ? "Verification Failed"
+              : "Verify Account"}
           </button>
-          <p className="text-center text-[#BFBFBF]">
+          <p
+            className={`${
+              otpVerified ? "invisible" : "block"
+            } text-center text-[#BFBFBF]`}
+          >
             Didn't receive code?{" "}
-            <a href="#" className="text-[#112D4E]">
+            <a href="#" className="text-[#112D4E] hover:underline">
               Resend
             </a>
           </p>
@@ -124,7 +135,7 @@ function OtpForm() {
       <a
         href="https://chaicode.com/"
         target="_blank"
-        className="w-16 absolute bottom-5 right-5"
+        className="w-24 absolute bottom-5 right-5"
       >
         <img src={logo} alt="Logo" className="rounded-md" />
       </a>
