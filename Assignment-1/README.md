@@ -20,6 +20,22 @@ This repository contains the solution for the assignment given by Hitesh Choudha
 
 ## Screenshots
 
+### OTP Form
+
+![otp1](./src//assets/otp1.png)
+![otp2](./src//assets/otp2.png)
+![otp3](./src//assets/otp3.png)
+
+### Course List
+
+![course1](./src//assets/course1.png)
+![course2](./src//assets/course2.png)
+
+### Batches 
+
+![batch](./src//assets/batch1.png)
+![batch](./src//assets/batch2.png)
+![batch](./src//assets/batch3.png)
 
 
 ## Additional Requirements
