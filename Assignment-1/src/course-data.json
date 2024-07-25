@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Interview Prepration with Javascript 2.0",
+        "img": "https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "price": "Rs. 9000/-",
+        "category": "Course"
+    },
+    {
+        "id": 2,
+        "title": "Aptitude - Averages, Mixtures & Allegation",
+        "img": "https://images.pexels.com/photos/2781814/pexels-photo-2781814.jpeg",
+        "price": "Free",
+        "category": "mock test"
+    },
+    {
+        "id": 3,
+        "title": "Aptitude - Simple & Compound Interest",
+        "img": "https://images.pexels.com/photos/1181233/pexels-photo-1181233.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "price": "Free",
+        "category": "mock test"
+    },
+    {
+        "id": 4,
+        "title": "Aptitude - Partnership",
+        "img": "https://images.pexels.com/photos/270640/pexels-photo-270640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "price": "Free",
+        "category": "mock test"
+    },
+    {
+        "id": 5,
+        "title": "Aptitude - Time & Work",
+        "img": "https://images.pexels.com/photos/1181474/pexels-photo-1181474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "price": "Free",
+        "category": "mock test"
+    }
+]
